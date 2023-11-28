@@ -26,10 +26,11 @@ main {
   }
 }
 
-img {
-  width: 100%;
+@media screen and (max-width: 995px) {
+  img {
+    width: 100%;
+  }
 }
-
 
 //Main content
 
@@ -49,7 +50,7 @@ img {
     padding: 0;
   }
 
-  box-shadow: 10px 10px 30px rgba($color: $Dark, $alpha: 1.0);
+  box-shadow: 10px 10px 30px rgba($color: $Dark, $alpha: 1);
 
   .box2,
   .box1 {
@@ -58,11 +59,9 @@ img {
 }
 
 .box2 {
-
   @media screen and (max-width: 995px) {
     width: 100%;
   }
-  
 }
 
 .box1 {
@@ -77,11 +76,11 @@ img {
     font-weight: 700;
 
     @media screen and (max-width: 525px) {
-        font-size: 45px;
+      font-size: 45px;
     }
 
     @media screen and (max-width: 465px) {
-        font-size: 35px;
+      font-size: 35px;
     }
   }
 
@@ -100,12 +99,12 @@ button {
   cursor: pointer;
 
   @media screen and (max-width: 415px) {
-        font-size: 12px;
-    }
+    font-size: 12px;
+  }
 
   &:hover {
     background: linear-gradient(to right, $Tomato2, $Tomato);
-    box-shadow: 10px 10px 30px rgba($color: $Tomato, $alpha: .4);
+    box-shadow: 10px 10px 30px rgba($color: $Tomato, $alpha: 0.4);
   }
 }
 
@@ -120,12 +119,12 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
-  
+
   & input {
     padding: 17px;
     border-radius: 7px;
     border: none;
-    outline: .4px solid $Grey;
+    outline: 0.4px solid $Grey;
     font-size: 16px;
     opacity: 0.6;
 
@@ -154,11 +153,10 @@ span {
   display: none;
 }
 
-
 .menu li {
   line-height: 2;
   font-size: 16px;
-  position: relative; 
+  position: relative;
 
   &::before {
     content: "\2713"; // unicode for checkmark
@@ -166,18 +164,18 @@ span {
     display: flex;
     width: 20px;
     height: 20px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background-color: $Tomato;
     color: $White;
-    position: absolute; 
+    position: absolute;
     left: -40px;
-    top: 50%; 
-    transform: translateY(-50%); 
+    top: 50%;
+    transform: translateY(-50%);
     align-items: center;
     justify-content: center;
 
-     @media screen and (max-width: 545px) {
-        top: 30%;
-     }
+    @media screen and (max-width: 545px) {
+      top: 30%;
+    }
   }
 }
