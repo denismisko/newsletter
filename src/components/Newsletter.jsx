@@ -60,7 +60,7 @@ function Newsletter() {
       emailInput.style.color = "red";
       return;
     }
-    
+
     setIsSuccess(true);
   }
 
@@ -69,7 +69,7 @@ function Newsletter() {
       {isSuccess ? (
         <div className="succes-message">
           <div id="checkmark"></div>
-          <h2>Thanks for Subscribing</h2>
+          <h2>Thanks for subscribing.</h2>
           <p>
             A confirmation email has been sent to <strong>{emailValue}</strong>.
             Please open it and click the button inside to confirm your
