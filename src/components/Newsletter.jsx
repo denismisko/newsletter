@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function Newsletter() {
   const [isSuccess, setIsSuccess] = useState(false);
-  const [emailValue, setEmailValue] = useState("email@company.com");
+  const [emailValue, setEmailValue] = useState("");
     const [imageSrc, setImageSrc] = useState(
       "images/illustration-sign-up-desktop.svg"
     );
@@ -60,7 +60,7 @@ function Newsletter() {
       emailInput.style.color = "red";
       return;
     }
-
+    
     setIsSuccess(true);
   }
 
@@ -99,6 +99,7 @@ function Newsletter() {
                   required
                   onChange={handleChange}
                   value={emailValue}
+                  placeholder="email@company.com"
                 />
               </div>
               <button onClick={handleSubmit}>
@@ -107,10 +108,7 @@ function Newsletter() {
             </div>
           </div>
           <div className="box2">
-            <img
-              src={imageSrc}
-              alt="illustration"
-            />
+            <img src={imageSrc} alt="illustration" />
           </div>
         </div>
       )}

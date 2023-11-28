@@ -26,6 +26,10 @@ main {
   }
 }
 
+img {
+  width: 100%;
+}
+
 
 //Main content
 
@@ -54,11 +58,11 @@ main {
 }
 
 .box2 {
-   @media screen and (max-width: 995px) {
-    img {
-      min-width: 600px;
-    }
+
+  @media screen and (max-width: 995px) {
+    width: 100%;
   }
+  
 }
 
 .box1 {
@@ -159,5 +163,9 @@ span {
     transform: translateY(-50%); 
     align-items: center;
     justify-content: center;
+
+     @media screen and (max-width: 545px) {
+        top: 30%;
+     }
   }
 }
