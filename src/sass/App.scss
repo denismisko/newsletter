@@ -1,0 +1,163 @@
+@import "./abstracts/variables";
+
+//General
+#root {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  margin-bottom: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $White;
+
+  & a {
+    color: hsl(124, 45%, 44%);
+  }
+}
+
+
+//Main content
+
+#flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: $White;
+  padding: 25px;
+  border-radius: 40px;
+  max-width: 880px;
+
+  @media screen and (max-width: 995px) {
+    flex-direction: column-reverse;
+
+    padding: 0;
+  }
+
+  box-shadow: 10px 10px 30px rgba($color: $Dark, $alpha: 1.0);
+
+  .box2,
+  .box1 {
+    margin: auto;
+  }
+}
+
+.box2 {
+   @media screen and (max-width: 995px) {
+    img {
+      min-width: 600px;
+    }
+  }
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  text-align: left;
+
+  h1 {
+    font-size: 55px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
+
+button {
+  border: none;
+  padding: 20px 60px;
+  color: $White;
+  background-color: $Dark;
+  border-radius: 7px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(to right, $Tomato2, $Tomato);
+    box-shadow: 10px 10px 30px rgba($color: $Tomato, $alpha: .4);
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  & input {
+    padding: 17px;
+    border-radius: 7px;
+    border: none;
+    outline: .4px solid $Grey;
+    font-size: 16px;
+    opacity: 0.6;
+
+    &:focus {
+      outline: 0.4px solid $Dark;
+      opacity: 1;
+    }
+  }
+
+  label {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+span {
+  position: absolute;
+  right: 0;
+}
+
+#error {
+  font-size: 12px;
+  font-weight: 700;
+  color: red;
+  display: none;
+}
+
+
+.menu li {
+  line-height: 2;
+  font-size: 16px;
+  position: relative; 
+
+  &::before {
+    content: "\2713"; // unicode for checkmark
+    font-size: 13px;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background-color: $Tomato;
+    color: $White;
+    position: absolute; 
+    left: -40px;
+    top: 50%; 
+    transform: translateY(-50%); 
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,44 @@
+@import "./abstracts/variables";
+
+.succes-message {
+    background: $White;
+    border-radius: 23px;
+    max-width: 300px;
+    padding: 50px;
+    text-align: left;
+    margin: auto;
+
+    h2 {
+        font-size: 50px;
+        margin: 0;
+        line-height: 1;
+    }
+
+    p {
+        margin: 25px 0px;
+    }
+}
+
+#dissmiss-button {
+    width: 100%;
+}
+
+#checkmark {
+    position: relative;
+    top: -20px;
+ 
+    &::before {
+        content: "\2713";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        padding: 15px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        color: $White;
+        background: linear-gradient(to top, $Tomato2, $Tomato);
+    }
+}
