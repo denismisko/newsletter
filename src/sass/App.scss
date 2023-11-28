@@ -75,6 +75,14 @@ img {
     font-size: 55px;
     margin: 0;
     font-weight: 700;
+
+    @media screen and (max-width: 525px) {
+        font-size: 45px;
+    }
+
+    @media screen and (max-width: 465px) {
+        font-size: 35px;
+    }
   }
 
   p {
@@ -90,6 +98,10 @@ button {
   border-radius: 7px;
   font-weight: 400;
   cursor: pointer;
+
+  @media screen and (max-width: 415px) {
+        font-size: 12px;
+    }
 
   &:hover {
     background: linear-gradient(to right, $Tomato2, $Tomato);
