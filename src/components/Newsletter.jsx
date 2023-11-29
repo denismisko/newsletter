@@ -3,12 +3,11 @@ import { useEffect, useState } from "react";
 function Newsletter() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [emailValue, setEmailValue] = useState("");
-    const [imageSrc, setImageSrc] = useState(
-      "images/illustration-sign-up-desktop.svg"
-    );
+  const [imageSrc, setImageSrc] = useState(
+    "images/illustration-sign-up-desktop.svg"
+  );
 
   useEffect(() => {
-
     function handleResize() {
       const newImageSrc =
         window.innerWidth <= 995
@@ -27,15 +26,23 @@ function Newsletter() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-
-  }, []); 
+  }, []);
 
   function handleChange(event) {
     setEmailValue(event.target.value);
+    dissmissError('error','email');
   }
 
   function handleDissmiss() {
     setIsSuccess(false);
+  }
+
+  function dissmissError(errorId, inputId) {
+    const error = document.getElementById(errorId);
+    const inputError = document.getElementById(inputId);
+    
+    error.style.display = 'none';
+    inputError.classList.remove('input-error');
   }
 
   function handleSubmit() {
@@ -47,19 +54,15 @@ function Newsletter() {
 
     if (!emailValue) {
       error.style.display = "block";
-      emailInput.style.outline = ".4px solid red";
-      emailInput.style.background = "#FFE8E6";
-      emailInput.style.color = "red";
+      emailInput.classList.add("input-error");
       return;
     }
 
     if (!emailRegex.test(emailValue)) {
       error.style.display = "block";
-      emailInput.style.outline = ".4px solid red";
-      emailInput.style.background = "#FFE8E6";
-      emailInput.style.color = "red";
+      emailInput.classList.add("input-error")
       return;
-    }
+    } 
 
     setIsSuccess(true);
   }

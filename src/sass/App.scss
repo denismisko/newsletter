@@ -30,7 +30,7 @@ main {
   img {
     width: 100%;
   }
-  
+
 }
 
 //Main content
@@ -96,7 +96,7 @@ button {
   color: $White;
   background-color: $Dark;
   border-radius: 7px;
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
 
   @media screen and (max-width: 415px) {
@@ -128,6 +128,12 @@ button {
     outline: 0.4px solid $Grey;
     font-size: 16px;
     opacity: 0.6;
+
+    &.input-error {
+      outline: .4px solid red;
+      background:#FFE8E6 ;
+      color: red;
+    }
 
     &:focus {
       outline: 0.4px solid $Dark;
